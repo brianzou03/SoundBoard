@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Sound Board</string>
+    <string name="C">C</string>
+    <string name="D">D</string>
+    <string name="E">E</string>
+    <string name="F">F</string>
+    <string name="G">G</string>
+    <string name="A">A</string>
+    <string name="B">B</string>
 </resources>
