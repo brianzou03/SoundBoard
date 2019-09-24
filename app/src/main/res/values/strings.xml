@@ -7,4 +7,13 @@
     <string name="G">G</string>
     <string name="A">A</string>
     <string name="B">B</string>
+    <string name="Bflat">BF</string>
+    <string name="Csharp">CS</string>
+    <string name="Dsharp">DS</string>
+    <string name="Fsharp">FS</string>
+    <string name="Gsharp">GS</string>
+
+
+
+
 </resources>

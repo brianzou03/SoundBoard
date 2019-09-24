@@ -18,14 +18,24 @@ public class SoundboardActivity extends AppCompatActivity {
     private int sIDg;
     private int sIDa;
     private int sIDb;
+    private int sIDbf;
+    private int sIDcs;
+    private int sIDds;
+    private int sIDfs;
+    private int sIDgs;
 
-    private Button c;
-    private Button d;
-    private Button e;
-    private Button f;
-    private Button g;
-    private Button a;
-    private Button b;
+    private Button button_c;
+    private Button button_d;
+    private Button button_e;
+    private Button button_f;
+    private Button button_g;
+    private Button button_a;
+    private Button button_b;
+    private Button button_bf;
+    private Button button_cs;
+    private Button button_ds;
+    private Button button_fs;
+    private Button button_gs;
 
     private boolean isSoundPoolLoaded;
     boolean loaded = false;
@@ -43,7 +53,7 @@ public class SoundboardActivity extends AppCompatActivity {
     }
 
     private void setListeners() {
-        c.setOnClickListener(new View.OnClickListener() {
+        button_c.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
@@ -61,7 +71,7 @@ public class SoundboardActivity extends AppCompatActivity {
             }
 
         });
-        d.setOnClickListener(new View.OnClickListener() {
+        button_d.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
@@ -79,7 +89,7 @@ public class SoundboardActivity extends AppCompatActivity {
             }
 
         });
-        e.setOnClickListener(new View.OnClickListener() {
+        button_e.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
@@ -97,7 +107,7 @@ public class SoundboardActivity extends AppCompatActivity {
             }
 
         });
-        f.setOnClickListener(new View.OnClickListener() {
+        button_f.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
@@ -115,7 +125,7 @@ public class SoundboardActivity extends AppCompatActivity {
             }
 
         });
-        g.setOnClickListener(new View.OnClickListener() {
+        button_g.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
@@ -133,7 +143,7 @@ public class SoundboardActivity extends AppCompatActivity {
             }
 
         });
-        a.setOnClickListener(new View.OnClickListener() {
+        button_a.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
@@ -151,7 +161,7 @@ public class SoundboardActivity extends AppCompatActivity {
             }
 
         });
-        b.setOnClickListener(new View.OnClickListener() {
+        button_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
@@ -163,6 +173,96 @@ public class SoundboardActivity extends AppCompatActivity {
                 // Is the sound loaded already?
                 if (isSoundPoolLoaded) {
                     soundPool.play(sIDb, volume, volume, 1, 0, 1f);
+                    Log.e("Test", "Played sound");
+                }
+
+            }
+
+        });
+        button_bf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
+                float actualVolume = (float) audioManager
+                        .getStreamVolume(AudioManager.STREAM_MUSIC);
+                float maxVolume = (float) audioManager
+                        .getStreamMaxVolume(AudioManager.STREAM_MUSIC);
+                float volume = actualVolume / maxVolume;
+                // Is the sound loaded already?
+                if (isSoundPoolLoaded) {
+                    soundPool.play(sIDbf, volume, volume, 1, 0, 1f);
+                    Log.e("Test", "Played sound");
+                }
+
+            }
+
+        });
+        button_cs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
+                float actualVolume = (float) audioManager
+                        .getStreamVolume(AudioManager.STREAM_MUSIC);
+                float maxVolume = (float) audioManager
+                        .getStreamMaxVolume(AudioManager.STREAM_MUSIC);
+                float volume = actualVolume / maxVolume;
+                // Is the sound loaded already?
+                if (isSoundPoolLoaded) {
+                    soundPool.play(sIDcs, volume, volume, 1, 0, 1f);
+                    Log.e("Test", "Played sound");
+                }
+
+            }
+
+        });
+        button_ds.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
+                float actualVolume = (float) audioManager
+                        .getStreamVolume(AudioManager.STREAM_MUSIC);
+                float maxVolume = (float) audioManager
+                        .getStreamMaxVolume(AudioManager.STREAM_MUSIC);
+                float volume = actualVolume / maxVolume;
+                // Is the sound loaded already?
+                if (isSoundPoolLoaded) {
+                    soundPool.play(sIDds, volume, volume, 1, 0, 1f);
+                    Log.e("Test", "Played sound");
+                }
+
+            }
+
+        });
+        button_fs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
+                float actualVolume = (float) audioManager
+                        .getStreamVolume(AudioManager.STREAM_MUSIC);
+                float maxVolume = (float) audioManager
+                        .getStreamMaxVolume(AudioManager.STREAM_MUSIC);
+                float volume = actualVolume / maxVolume;
+                // Is the sound loaded already?
+                if (isSoundPoolLoaded) {
+                    soundPool.play(sIDfs, volume, volume, 1, 0, 1f);
+                    Log.e("Test", "Played sound");
+                }
+
+            }
+
+        });
+        button_gs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
+                float actualVolume = (float) audioManager
+                        .getStreamVolume(AudioManager.STREAM_MUSIC);
+                float maxVolume = (float) audioManager
+                        .getStreamMaxVolume(AudioManager.STREAM_MUSIC);
+                float volume = actualVolume / maxVolume;
+                // Is the sound loaded already?
+                if (isSoundPoolLoaded) {
+                    soundPool.play(sIDgs, volume, volume, 1, 0, 1f);
                     Log.e("Test", "Played sound");
                 }
 
@@ -188,17 +288,30 @@ public class SoundboardActivity extends AppCompatActivity {
         sIDg = soundPool.load(this, R.raw.scaleg, 1);
         sIDa = soundPool.load(this, R.raw.scalea, 1);
         sIDb = soundPool.load(this, R.raw.scaleb, 1);
+        sIDbf = soundPool.load(this, R.raw.scalebb, 1);
+        sIDcs = soundPool.load(this, R.raw.scalecs, 1);
+        sIDds = soundPool.load(this, R.raw.scaleds, 1);
+        sIDfs = soundPool.load(this, R.raw.scalefs, 1);
+        sIDgs = soundPool.load(this, R.raw.scalegs, 1);
+
+
+
+
     }
 
     private void wireWidgets() {
-        c = findViewById(R.id.button_main_C);
-        d = findViewById(R.id.button_Main_D);
-        e = findViewById(R.id.button_main_E);
-        f = findViewById(R.id.button_main_F);
-        g = findViewById(R.id.button_main_G);
-        a = findViewById(R.id.button_main_A);
-        b = findViewById(R.id.button_main_B);
-
+        button_c = findViewById(R.id.button_main_C);
+        button_d = findViewById(R.id.button_Main_D);
+        button_e = findViewById(R.id.button_main_E);
+        button_f = findViewById(R.id.button_main_F);
+        button_g = findViewById(R.id.button_main_G);
+        button_a = findViewById(R.id.button_main_A);
+        button_b = findViewById(R.id.button_main_B);
+        button_bf = findViewById(R.id.button_main_bflat);
+        button_cs = findViewById(R.id.button_main_csharp);
+        button_ds = findViewById(R.id.button_main_dsharp);
+        button_fs = findViewById(R.id.button_main_fsharp);
+        button_gs = findViewById(R.id.button_main_gsharp);
     }
 
 

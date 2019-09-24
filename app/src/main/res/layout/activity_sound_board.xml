@@ -11,11 +11,10 @@
         android:id="@+id/button_main_C"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:text="@string/C"
-        app:layout_constraintBottom_toTopOf="@+id/button_Main_D"
+        app:layout_constraintBottom_toTopOf="@+id/button_main_csharp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_main_B" />
 
@@ -23,35 +22,32 @@
         android:id="@+id/button_main_B"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:text="@string/B"
         app:layout_constraintBottom_toTopOf="@+id/button_main_C"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_main_A" />
+        app:layout_constraintTop_toBottomOf="@+id/button_main_bflat" />
 
     <Button
         android:id="@+id/button_main_G"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:text="@string/G"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button_main_gsharp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_main_F" />
+        app:layout_constraintTop_toBottomOf="@+id/button_main_fsharp" />
 
     <Button
         android:id="@+id/button_main_A"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:text="@string/A"
-        app:layout_constraintBottom_toTopOf="@+id/button_main_B"
+        app:layout_constraintBottom_toTopOf="@+id/button_main_bflat"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -59,11 +55,10 @@
         android:id="@+id/button_main_F"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:text="@string/F"
-        app:layout_constraintBottom_toTopOf="@+id/button_main_G"
+        app:layout_constraintBottom_toTopOf="@+id/button_main_fsharp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_main_E" />
 
@@ -71,24 +66,77 @@
         android:id="@+id/button_main_E"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:text="@string/E"
         app:layout_constraintBottom_toTopOf="@+id/button_main_F"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_Main_D" />
+        app:layout_constraintTop_toBottomOf="@+id/button_main_dsharp" />
 
     <Button
         android:id="@+id/button_Main_D"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:text="@string/D"
-        app:layout_constraintBottom_toTopOf="@+id/button_main_E"
+        app:layout_constraintBottom_toTopOf="@+id/button_main_dsharp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_main_csharp" />
+
+    <Button
+        android:id="@+id/button_main_bflat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Bflat"
+        app:layout_constraintBottom_toTopOf="@+id/button_main_B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_main_A" />
+
+    <Button
+        android:id="@+id/button_main_csharp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Csharp"
+        app:layout_constraintBottom_toTopOf="@+id/button_Main_D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_main_C" />
+
+    <Button
+        android:id="@+id/button_main_fsharp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Fsharp"
+        app:layout_constraintBottom_toTopOf="@+id/button_main_G"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_main_F" />
+
+    <Button
+        android:id="@+id/button_main_gsharp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Gsharp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_main_G" />
+
+    <Button
+        android:id="@+id/button_main_dsharp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Dsharp"
+        app:layout_constraintBottom_toTopOf="@+id/button_main_E"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_Main_D" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
