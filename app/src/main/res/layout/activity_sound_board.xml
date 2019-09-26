@@ -139,4 +139,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_Main_D" />
 
+    <Button
+        android:id="@+id/song_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/songs"
+        app:layout_constraintBottom_toTopOf="@+id/scale_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_main_C"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/scale_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/scale"
+        app:layout_constraintBottom_toTopOf="@+id/octave_changer_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_Main_D"
+        app:layout_constraintTop_toBottomOf="@+id/song_main" />
+
+    <Switch
+        android:id="@+id/octave_changer_main"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:text="@string/OctaveChanger"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_main_fsharp"
+        app:layout_constraintTop_toBottomOf="@+id/scale_main" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,8 +12,9 @@
     <string name="Dsharp">DS</string>
     <string name="Fsharp">FS</string>
     <string name="Gsharp">GS</string>
-
-
+    <string name="OctaveChanger">Octave Changer</string>
+    <string name="songs">Song 1</string>
+    <string name="scale">Scale</string>
 
 
 </resources>
