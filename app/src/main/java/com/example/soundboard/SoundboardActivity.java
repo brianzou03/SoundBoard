@@ -9,6 +9,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.Switch;
 
 import java.util.HashMap;
@@ -76,6 +77,7 @@ public class SoundboardActivity extends AppCompatActivity implements View.OnClic
         initializeNotes();
         setListeners();
 
+
     }
 
     private void scale(){
@@ -122,7 +124,20 @@ public class SoundboardActivity extends AppCompatActivity implements View.OnClic
 
         button_gs.setOnClickListener(keyboardListener);
 
-        octave_changer.setOnClickListener(this);
+        octave_changer.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b == true)
+                {
+                    noteMap = noteMapHighOctave;
+                }
+
+
+                else{
+                    noteMap = noteMapNormalOctave;
+                }
+            }
+        });
 
         button_scale.setOnClickListener(this);
 
@@ -185,16 +200,16 @@ public class SoundboardActivity extends AppCompatActivity implements View.OnClic
         hsIDfs = soundPool.load(this, R.raw.scalehighfs, 1);
         hsIDgs = soundPool.load(this, R.raw.scalehighgs, 1);
 
+
+        noteMapHighOctave = new HashMap<>();
         noteMapNormalOctave = new HashMap<>();
-
-
 
         // add the high octave to noteMapHighOctave
 
         // for your octave switch on click listener, change what noteMap is pointing to
 
 
-        //SET ON CHECK CHANGE LISTENER, SWITCH MAPS (CHANGE WHAT NOTE MAP IS POINTING AT)
+        //SET ON CHECK CHANGE LISTENER, SWITCH MAPS (CHANGE WHAT NOTE MAP IS POINTING AT) DO ONE CHALLENGE
             noteMapHighOctave.put(button_c.getId(), hsIDc);
             noteMapHighOctave.put(button_d.getId(), hsIDd);
             noteMapHighOctave.put(button_e.getId(), hsIDe);
@@ -221,8 +236,7 @@ public class SoundboardActivity extends AppCompatActivity implements View.OnClic
             noteMapNormalOctave.put(button_fs.getId(), sIDfs);
             noteMapNormalOctave.put(button_gs.getId(), sIDgs);
 
-
-        noteMap = noteMapNormalOctave;
+            noteMap = noteMapNormalOctave;
 
 
     }
@@ -269,7 +283,7 @@ public class SoundboardActivity extends AppCompatActivity implements View.OnClic
         @Override
         public void onClick(View view) {
             //read from map
-            int songId = noteMapNormalOctave.get(view.getId());
+            int songId = noteMap.get(view.getId());
             if ( songId != 0){
                 soundPool.play(songId, 1, 1, 1, 0, 1);
             }
