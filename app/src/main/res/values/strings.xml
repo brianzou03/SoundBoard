@@ -15,6 +15,7 @@
     <string name="OctaveChanger">Octave Changer</string>
     <string name="songs">Song 1</string>
     <string name="scale">Scale</string>
+    <string name="noteAdder">Note Adder</string>
 
 
 </resources>

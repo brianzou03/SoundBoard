@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -60,12 +61,15 @@ public class SoundboardActivity extends AppCompatActivity implements View.OnClic
     private Button button_scale;
     private Button song1;
     private Switch octave_changer;
-    private Note[] songNotes;
+    private ArrayList<Note> songNotes;
     private Map<Integer, Integer> noteMapNormalOctave;
     private Map<Integer, Integer> noteMap;
     private Map<Integer, Integer> noteMapHighOctave;
     private boolean isSoundPoolLoaded;
-    private boolean octavehigh;
+    private Switch note_Adder;
+    private boolean adding;
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -76,8 +80,18 @@ public class SoundboardActivity extends AppCompatActivity implements View.OnClic
         initializeSound();
         initializeNotes();
         setListeners();
+        initializeSongs();
 
 
+
+    }
+
+    private void initializeSongs(){
+        ArrayList<Note> song1create = new ArrayList<>();
+        song1create.add(noteE);
+        song1create.add(noteC);
+        song1create.add(noteA);
+        songNotes = song1create;
     }
 
     private void scale(){
@@ -96,7 +110,6 @@ public class SoundboardActivity extends AppCompatActivity implements View.OnClic
 
     private void setListeners() {
 
-        //octave_changer.setOnChe
 
 
         KeyboardListener keyboardListener = new KeyboardListener();
@@ -131,8 +144,6 @@ public class SoundboardActivity extends AppCompatActivity implements View.OnClic
                 {
                     noteMap = noteMapHighOctave;
                 }
-
-
                 else{
                     noteMap = noteMapNormalOctave;
                 }
@@ -142,6 +153,13 @@ public class SoundboardActivity extends AppCompatActivity implements View.OnClic
         button_scale.setOnClickListener(this);
 
         song1.setOnClickListener(this);
+
+        note_Adder.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                adding = b;
+            }
+        });
 
     }
 
@@ -159,7 +177,7 @@ public class SoundboardActivity extends AppCompatActivity implements View.OnClic
         noteFS = new Note(sIDfs, 500);
         noteGS = new Note(sIDgs, 500);
 
-        songNotes = new Note[] {noteA, noteFS, noteG, noteA, noteFS, noteG, noteA, noteA, noteB, noteCS, noteD, noteE, noteFS, noteG};
+
 
     }
 
@@ -257,6 +275,7 @@ public class SoundboardActivity extends AppCompatActivity implements View.OnClic
         button_scale = findViewById(R.id.scale_main);
         octave_changer = findViewById(R.id.octave_changer_main);
         song1 = findViewById(R.id.song_main);
+        note_Adder = findViewById(R.id.noteAdder);
 
     }
 
@@ -284,7 +303,11 @@ public class SoundboardActivity extends AppCompatActivity implements View.OnClic
         public void onClick(View view) {
             //read from map
             int songId = noteMap.get(view.getId());
-            if ( songId != 0){
+            if (adding) {
+                addNote(songId);
+                soundPool.play(songId, 1, 1, 1, 0, 1);
+            }
+            else if (songId != 0) {
                 soundPool.play(songId, 1, 1, 1, 0, 1);
             }
 
@@ -300,10 +323,22 @@ public class SoundboardActivity extends AppCompatActivity implements View.OnClic
             e.printStackTrace();
         }
     }
-    public void playNote(Note[] song){
-        for(Note note: song){
+    public void playNote(ArrayList<Note> song) {
+        for (Note note : song) {
             soundPool.play(note.getSoundID(), 1, 1, 1, 0, 1);
             delay(note.getTimedDelayed());
         }
-}}
+
+
+    }
+    public void addNote(int x) {
+            Note noteAdded = new Note(x, 500);
+            if (adding){
+                songNotes.add(noteAdded);
+            }
+
+        }
+}
+
+
 
