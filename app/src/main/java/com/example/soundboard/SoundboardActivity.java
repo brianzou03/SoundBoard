@@ -101,29 +101,31 @@ public class SoundboardActivity extends AppCompatActivity implements View.OnClic
 
     private void initializeSongs(){
         ArrayList<Note> song1create = new ArrayList<>();
-        song1create.add(new Note(noteHBF.getSoundID(), 454+454));
-        song1create.add(new Note(noteHBF.getSoundID(), 227));
-        song1create.add(new Note(noteHBF.getSoundID(), 113));
-        song1create.add(new Note(noteHBF.getSoundID(), 113));
-        song1create.add(new Note(noteGS.getSoundID(), 113));
-        song1create.add(new Note(noteHBF.getSoundID(), 113+227));
-        song1create.add(new Note(noteHBF.getSoundID(), 227));
-        song1create.add(new Note(noteHBF.getSoundID(), 227+454));
-        song1create.add(new Note(noteHBF.getSoundID(), 227));
-        song1create.add(new Note(noteHBF.getSoundID(), 113));
-        song1create.add(new Note(noteGS.getSoundID(), 113));
-        song1create.add(new Note(noteHBF.getSoundID(), 113));
-        song1create.add(new Note(noteHBF.getSoundID(), 227+113));
-        song1create.add(new Note(noteHCS.getSoundID(), 227+454));
-        song1create.add(new Note(noteHBF.getSoundID(), 454));
-        song1create.add(new Note(noteGS.getSoundID(), 454));
-        song1create.add(new Note(noteGS.getSoundID(), 454));
-        song1create.add(new Note(noteFS.getSoundID(), 454));
-        song1create.add(new Note(noteDS.getSoundID(), 227));
-        song1create.add(new Note(noteDS.getSoundID(), 227));
-        song1create.add(new Note(noteF.getSoundID(), 227));
-        song1create.add(new Note(noteFS.getSoundID(), 227));
-        song1create.add(new Note(noteDS.getSoundID(), 227));
+        for(int i = 0; i <= 0; i++){ // (add to i in order to do more loops)
+            song1create.add(new Note(noteHBF.getSoundID(), 454+454));
+            song1create.add(new Note(noteHBF.getSoundID(), 227));
+            song1create.add(new Note(noteHBF.getSoundID(), 113));
+            song1create.add(new Note(noteHBF.getSoundID(), 113));
+            song1create.add(new Note(noteGS.getSoundID(), 113));
+            song1create.add(new Note(noteHBF.getSoundID(), 113+227));// end of first measure
+            song1create.add(new Note(noteHBF.getSoundID(), 454+454));
+            song1create.add(new Note(noteHBF.getSoundID(), 227));
+            song1create.add(new Note(noteHBF.getSoundID(), 113));
+            song1create.add(new Note(noteHBF.getSoundID(), 113));
+            song1create.add(new Note(noteGS.getSoundID(), 113));
+            song1create.add(new Note(noteHBF.getSoundID(), 113+227));// end of second measure
+            song1create.add(new Note(noteHBF.getSoundID(), 454+227));
+            song1create.add(new Note(noteHCS.getSoundID(), 454));
+            song1create.add(new Note(noteHBF.getSoundID(), 454));
+            song1create.add(new Note(noteGS.getSoundID(), 454));// end of third measure
+            song1create.add(new Note(noteFS.getSoundID(), 454));
+            song1create.add(new Note(noteDS.getSoundID(), 227));
+            song1create.add(new Note(noteDS.getSoundID(), 227));
+            song1create.add(new Note(noteF.getSoundID(), 227));
+            song1create.add(new Note(noteFS.getSoundID(), 227));
+            song1create.add(new Note(noteDS.getSoundID(), 227));
+        }
+
 
 
         songNotes = song1create;
