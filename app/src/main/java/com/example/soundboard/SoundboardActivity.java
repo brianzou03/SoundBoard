@@ -102,28 +102,28 @@ public class SoundboardActivity extends AppCompatActivity implements View.OnClic
     private void initializeSongs(){
         ArrayList<Note> song1create = new ArrayList<>();
         song1create.add(new Note(noteHBF.getSoundID(), 1000));
-        song1create.add(noteHBF);
-        song1create.add(noteHBF);
-        song1create.add(noteHBF);
-        song1create.add(noteGS);
-        song1create.add(noteHBF);
+        song1create.add(new Note(noteHBF.getSoundID(), 200));
+        song1create.add(new Note(noteHBF.getSoundID(), 200));
+        song1create.add(new Note(noteHBF.getSoundID(), 200));
+        song1create.add(new Note(noteGS.getSoundID(), 200));
+        song1create.add(new Note(noteHBF.getSoundID(), 200));
         song1create.add(new Note(noteHBF.getSoundID(), 1000));
-        song1create.add(noteHBF);
-        song1create.add(noteHBF);
-        song1create.add(noteHBF);
-        song1create.add(noteGS);
-        song1create.add(noteHBF);
+        song1create.add(new Note(noteHBF.getSoundID(), 200));
+        song1create.add(new Note(noteHBF.getSoundID(), 200));
+        song1create.add(new Note(noteHBF.getSoundID(), 200));
+        song1create.add(new Note(noteGS.getSoundID(), 200));
+        song1create.add(new Note(noteHBF.getSoundID(), 200));
         song1create.add(new Note(noteHBF.getSoundID(), 1000));
-        song1create.add(noteHCS);
-        song1create.add(noteHBF);
-        song1create.add(noteGS);
-        song1create.add(noteGS);
-        song1create.add(noteFS);
-        song1create.add(noteDS);
-        song1create.add(noteDS);
-        song1create.add(noteF);
-        song1create.add(noteFS);
-        song1create.add(noteDS);
+        song1create.add(new Note(noteHCS.getSoundID(), 200));
+        song1create.add(new Note(noteHBF.getSoundID(), 200));
+        song1create.add(new Note(noteGS.getSoundID(), 200));
+        song1create.add(new Note(noteGS.getSoundID(), 200));
+        song1create.add(new Note(noteFS.getSoundID(), 200));
+        song1create.add(new Note(noteDS.getSoundID(), 200));
+        song1create.add(new Note(noteDS.getSoundID(), 200));
+        song1create.add(new Note(noteF.getSoundID(), 200));
+        song1create.add(new Note(noteFS.getSoundID(), 200));
+        song1create.add(new Note(noteDS.getSoundID(), 200));
 
 
         songNotes = song1create;
