@@ -33,6 +33,19 @@ public class SoundboardActivity extends AppCompatActivity implements View.OnClic
     private Note noteFS;
     private Note noteGS;
 
+    private Note noteHC;
+    private Note noteHD;
+    private Note noteHE;
+    private Note noteHF;
+    private Note noteHG;
+    private Note noteHA;
+    private Note noteHB;
+    private Note noteHBF;
+    private Note noteHCS;
+    private Note noteHDS;
+    private Note noteHFS;
+    private Note noteHGS;
+
     private int hsIDc;
     private int hsIDd;
     private int hsIDe;
@@ -88,9 +101,31 @@ public class SoundboardActivity extends AppCompatActivity implements View.OnClic
 
     private void initializeSongs(){
         ArrayList<Note> song1create = new ArrayList<>();
-        song1create.add(noteE);
-        song1create.add(noteC);
-        song1create.add(noteA);
+        song1create.add(new Note(noteHBF.getSoundID(), 1000));
+        song1create.add(noteHBF);
+        song1create.add(noteHBF);
+        song1create.add(noteHBF);
+        song1create.add(noteGS);
+        song1create.add(noteHBF);
+        song1create.add(new Note(noteHBF.getSoundID(), 1000));
+        song1create.add(noteHBF);
+        song1create.add(noteHBF);
+        song1create.add(noteHBF);
+        song1create.add(noteGS);
+        song1create.add(noteHBF);
+        song1create.add(new Note(noteHBF.getSoundID(), 1000));
+        song1create.add(noteHCS);
+        song1create.add(noteHBF);
+        song1create.add(noteGS);
+        song1create.add(noteGS);
+        song1create.add(noteFS);
+        song1create.add(noteDS);
+        song1create.add(noteDS);
+        song1create.add(noteF);
+        song1create.add(noteFS);
+        song1create.add(noteDS);
+
+
         songNotes = song1create;
     }
 
@@ -164,19 +199,31 @@ public class SoundboardActivity extends AppCompatActivity implements View.OnClic
     }
 
     private void initializeNotes(){
-        noteC = new Note(sIDc, 500);
-        noteD = new Note(sIDd, 500);
-        noteE = new Note(sIDe, 500);
-        noteF = new Note(sIDf, 500);
-        noteG = new Note(sIDg, 500);
-        noteA = new Note(sIDa, 500);
-        noteB = new Note(sIDb, 500);
-        noteBF = new Note(sIDbf, 500);
-        noteCS = new Note(sIDcs, 500);
-        noteDS = new Note(sIDds, 500);
-        noteFS = new Note(sIDfs, 500);
-        noteGS = new Note(sIDgs, 500);
+        noteC = new Note(sIDc, 200);
+        noteD = new Note(sIDd, 200);
+        noteE = new Note(sIDe, 200);
+        noteF = new Note(sIDf, 200);
+        noteG = new Note(sIDg, 200);
+        noteA = new Note(sIDa, 200);
+        noteB = new Note(sIDb, 200);
+        noteBF = new Note(sIDbf, 200);
+        noteCS = new Note(sIDcs, 200);
+        noteDS = new Note(sIDds, 200);
+        noteFS = new Note(sIDfs, 200);
+        noteGS = new Note(sIDgs, 200);
 
+        noteHC = new Note(hsIDc, 200);
+        noteHD = new Note(hsIDd, 200);
+        noteHE = new Note(hsIDe, 200);
+        noteHF = new Note(hsIDf, 200);
+        noteHG = new Note(hsIDg, 200);
+        noteHA = new Note(hsIDa, 200);
+        noteHB = new Note(hsIDb, 200);
+        noteHBF = new Note(hsIDbf, 200);
+        noteHCS = new Note(hsIDcs, 200);
+        noteHDS = new Note(hsIDds, 200);
+        noteHFS = new Note(hsIDfs, 200);
+        noteHGS = new Note(hsIDgs, 200);
 
 
     }
@@ -222,12 +269,6 @@ public class SoundboardActivity extends AppCompatActivity implements View.OnClic
         noteMapHighOctave = new HashMap<>();
         noteMapNormalOctave = new HashMap<>();
 
-        // add the high octave to noteMapHighOctave
-
-        // for your octave switch on click listener, change what noteMap is pointing to
-
-
-        //SET ON CHECK CHANGE LISTENER, SWITCH MAPS (CHANGE WHAT NOTE MAP IS POINTING AT) DO ONE CHALLENGE
             noteMapHighOctave.put(button_c.getId(), hsIDc);
             noteMapHighOctave.put(button_d.getId(), hsIDd);
             noteMapHighOctave.put(button_e.getId(), hsIDe);
