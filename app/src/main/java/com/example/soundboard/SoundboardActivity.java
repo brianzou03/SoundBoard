@@ -101,7 +101,7 @@ public class SoundboardActivity extends AppCompatActivity implements View.OnClic
 
     private void initializeSongs(){
         ArrayList<Note> song1create = new ArrayList<>();
-        for(int i = 0; i <= 0; i++){ // (add to i in order to do more loops)
+        for(int i = 0; i <= 20; i++){ // (add to i in order to do more loops)
             song1create.add(new Note(noteHBF.getSoundID(), 454+454));
             song1create.add(new Note(noteHBF.getSoundID(), 227));
             song1create.add(new Note(noteHBF.getSoundID(), 113));
